@@ -4,15 +4,15 @@ vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 
 -- Auto tabs without .editorconfig
-vim.opt_local.shiftwidth = 4
-vim.opt_local.tabstop = 4
-vim.opt_local.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
 
 -- Self indent and handle wrapping on lll
 vim.opt.smartindent = true
 vim.opt.wrap = false
 
--- Wildmode menu
+-- Wildmpde menu
 vim.opt.wildmode = "longest:full,full"
 vim.opt.wildmenu = true
 vim.opt.wildignore = {
@@ -34,7 +34,8 @@ vim.opt.nu = true
 -- It's always too early for math
 vim.opt.relativenumber = true
 
--- Don't need swaps or backups on local. We have git.
+-- Swapfiles on local, in 2023? We don't need backups either, but undos are a
+-- nice QoL.
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
@@ -50,7 +51,7 @@ vim.opt.termguicolors = true
 -- Keep lines above cursor for context
 vim.opt.scrolloff = 8
 
-vim.opt.isfname:append("@-@")
 vim.opt.signcolumn = "yes"
+vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
