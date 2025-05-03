@@ -20,10 +20,17 @@ require("cloak").setup({
 		{
 			file_pattern = {
 				"*.tf",
-				"*.tf*",
 			},
-			cloak_pattern = ".*",
+			cloak_pattern = "=.*",
 			replace = nil,
 		},
+		{
+			file_pattern = {
+				"*-secret.yaml",
+				"*-secret.yml",
+			},
+			cloak_pattern = ": '((https|git|ssh)://).+",
+			replace = nil,
+		}
 	},
 })
